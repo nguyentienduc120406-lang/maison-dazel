@@ -154,11 +154,17 @@ header {
     padding: 20px 40px;
 }
 
-/* Ép Logo và chữ Liên hệ nằm ngang cạnh nhau */
+/* Ép nhóm Icon nằm ngang cạnh nhau */
 .left-section {
     display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 40px; /* Khoảng cách giữa Logo và Liên hệ */
+    align-items: center; 
+    gap: 20px; /* Chỉnh từ 40px xuống 20px cho 2 icon gần nhau hơn */
+}
+
+/* Hiệu ứng khi di chuột vào icon */
+.icon-link:hover svg {
+    stroke: gray; /* Đổi sang màu xám khi trỏ chuột vào */
+    transition: 0.3s;
 }
 
 /* Trang trí cho chữ Liên hệ */
