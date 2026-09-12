@@ -146,3 +146,30 @@ footer {
     border-top: 1px solid #f0f0f0;
     margin-top: 40px;
 }
+/* Dàn hàng ngang cho toàn bộ Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Đẩy Logo sang trái, cụm Menu sang phải */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* Dàn hàng ngang cho khu vực chứa Menu và nút Liên hệ */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Khoảng cách giữa menu chính và cụm tìm kiếm */
+}
+
+/* Kiểu dáng cho cụm Tìm kiếm / Liên hệ */
+.header-actions {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa nút Tìm kiếm và Liên hệ */
+}
+
+.header-actions a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px; /* Chỉnh chữ nhỏ lại cho tinh tế giống LV */
+    text-transform: uppercase;
+}
