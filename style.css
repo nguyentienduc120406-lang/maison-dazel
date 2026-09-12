@@ -146,30 +146,34 @@ footer {
     border-top: 1px solid #f0f0f0;
     margin-top: 40px;
 }
-/* Dàn hàng ngang cho toàn bộ Header */
+/* Dàn 2 nhóm (Trái - Phải) sang 2 bên màn hình */
 header {
     display: flex;
-    justify-content: space-between; /* Đẩy Logo sang trái, cụm Menu sang phải */
+    justify-content: space-between; 
     align-items: center;
     padding: 20px 40px;
 }
 
-/* Dàn hàng ngang cho khu vực chứa Menu và nút Liên hệ */
-nav {
+/* Ép Logo và chữ Liên hệ nằm ngang cạnh nhau */
+.left-section {
     display: flex;
-    align-items: center;
-    gap: 30px; /* Khoảng cách giữa menu chính và cụm tìm kiếm */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 40px; /* Khoảng cách giữa Logo và Liên hệ */
 }
 
-/* Kiểu dáng cho cụm Tìm kiếm / Liên hệ */
-.header-actions {
-    display: flex;
-    gap: 20px; /* Khoảng cách giữa nút Tìm kiếm và Liên hệ */
-}
-
-.header-actions a {
+/* Trang trí cho chữ Liên hệ */
+.contact-link {
     text-decoration: none;
     color: black;
-    font-size: 14px; /* Chỉnh chữ nhỏ lại cho tinh tế giống LV */
-    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Ép thanh Menu nằm ngang ngang */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Khoảng cách giữa các chữ trong menu */
+    list-style: none; /* Xóa dấu chấm tròn nếu có */
+    margin: 0;
 }
