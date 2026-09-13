@@ -183,3 +183,137 @@ nav ul {
     list-style: none; /* Xóa dấu chấm tròn nếu có */
     margin: 0;
 }
+/* Giao diện trang đăng nhập mới */
+.login-wrapper {
+    max-width: 450px;
+    margin: 60px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-group h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.create-account {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #555;
+}
+
+/* Các ô nhập liệu */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.left-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.forgot-pw {
+    color: #777;
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn-signin {
+    width: 100%;
+    padding: 15px;
+    background-color: #0b1c31; /* Màu xanh đen sang trọng */
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Đường gạch ngang "hoặc" */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+    margin: 40px 0;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+.separator::before { margin-right: 15px; }
+.separator::after { margin-left: 15px; }
+
+/* 3 Nút Mạng xã hội hình tròn */
+.social-login {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Tạo bóng đổ nhẹ cho nút */
+    transition: transform 0.2s;
+}
+
+.circle:hover {
+    transform: translateY(-3px); /* Hiệu ứng nhấc lên khi trỏ chuột */
+}
+
+/* Màu sắc của từng logo */
+.fb-circle { background-color: #1877F2; }
+.gg-circle { background-color: white; border: 1px solid #ddd; }
+.apple-circle { background-color: black; }
