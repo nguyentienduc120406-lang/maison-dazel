@@ -79,5 +79,80 @@
             </div>
         </div>
     </main>
+<!-- Các phần giao diện cũ ở trên -->
+            <div class="social-login">
+                ...
+            </div>
+        </div>
+    </main>
+
+    <!-- === DÁN ĐOẠN CODE JS / FIREBASE VÀO NGAY ĐÂY === -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { 
+        getAuth, 
+        GoogleAuthProvider, 
+        FacebookAuthProvider, 
+        OAuthProvider, 
+        signInWithPopup 
+      } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+      // Cấu hình Firebase
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      // Xử lý nút Google
+      const googleBtn = document.querySelector('.gg-circle');
+      if (googleBtn) {
+        googleBtn.addEventListener('click', () => {
+          const provider = new GoogleAuthProvider();
+          signInWithPopup(auth, provider)
+            .then((result) => {
+              alert(`Xin chào ${result.user.displayName}! Đăng nhập thành công.`);
+              window.location.href = "index.html";
+            })
+            .catch(() => alert("Đăng nhập Google thất bại!"));
+        });
+      }
+
+      // Xử lý nút Facebook
+      const fbBtn = document.querySelector('.fb-circle');
+      if (fbBtn) {
+        fbBtn.addEventListener('click', () => {
+          const provider = new FacebookAuthProvider();
+          signInWithPopup(auth, provider)
+            .then((result) => {
+              alert(`Xin chào ${result.user.displayName}! Đăng nhập thành công.`);
+              window.location.href = "index.html";
+            })
+            .catch(() => alert("Đăng nhập Facebook thất bại!"));
+        });
+      }
+
+      // Xử lý nút Apple
+      const appleBtn = document.querySelector('.apple-circle');
+      if (appleBtn) {
+        appleBtn.addEventListener('click', () => {
+          const provider = new OAuthProvider('apple.com');
+          signInWithPopup(auth, provider)
+            .then(() => {
+              alert("Đăng nhập Apple thành công!");
+              window.location.href = "index.html";
+            })
+            .catch(() => alert("Đăng nhập Apple thất bại!"));
+        });
+      }
+    </script>
+    <!-- === HẾT ĐOẠN DÁN === -->
+
 </body>
 </html>
