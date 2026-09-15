@@ -324,19 +324,22 @@ nav ul {
 /* 1. Phông chữ cho Logo và các Tiêu đề chính */
 h1, h2, h3, .logo, .hero h1, .brand-title {
     font-family: 'Bodoni Moda', serif !important;
-    font-weight: 400;
+    font-weight: 600; /* Đậm hơn để nét mỏng rõ hơn */
+    color: #000 !important; /* Đen tuyền tuyệt đối */
     text-transform: uppercase;
     letter-spacing: 6px; 
+    -webkit-font-smoothing: antialiased;
 }
 
 /* 2. Phông chữ cho thanh Menu (Trang chủ, Cửa hàng, Tìm kiếm...) */
 nav ul li a {
     font-family: 'Bodoni Moda', serif !important;
-    font-weight: 400;
+    font-weight: 600;
+    color: #000 !important;
     text-transform: uppercase;
     letter-spacing: 3px; 
     text-decoration: none;
-    color: #111; 
+    -webkit-font-smoothing: antialiased;
 }
 
 /* 3. Phông chữ cho các nút bấm (Khám phá, Mua ngay...) */
