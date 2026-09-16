@@ -28,18 +28,29 @@
         <nav>
             <ul>
                 <li><a href="index.html">TRANG CHỦ</a></li>
-                <li><a href="#">TÌM KIẾM</a></li> 
+                <li><a href="#" id="search-btn">TÌM KIẾM</a></li> 
                 <li><a href="shop.html">CỬA HÀNG</a></li>
                 <li><a href="about.html">GIỚI THIỆU</a></li>
             </ul>
         </nav>
     </header>
-
+<!-- Khung tìm kiếm ẩn trượt xuống -->
+<div id="search-box" class="search-slide-box">
+    <input type="text" placeholder="Bạn muốn tìm gì hôm nay?">
+    <button type="button">TÌM KIẾM</button>
+</div>
     <main class="container">
         <div class="wishlist-box">
             <h2 class="section-title">SẢN PHẨM YÊU THÍCH</h2>
             <p style="text-align: center; color: gray;">Danh sách trống. Hãy thả tim những sản phẩm bạn yêu thích nhé!</p>
         </div>
     </main>
+<!-- Script bật tắt hiệu ứng trượt tìm kiếm -->
+<script>
+    document.getElementById("search-btn").addEventListener("click", function(event) {
+        event.preventDefault(); 
+        document.getElementById("search-box").classList.toggle("show");
+    });
+</script>
 </body>
 </html>

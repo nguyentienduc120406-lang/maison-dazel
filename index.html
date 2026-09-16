@@ -28,13 +28,17 @@
 <nav>
     <ul>
         <li><a href="index.html">TRANG CHỦ</a></li>
-        <li><a href="search.html">TÌM KIẾM</a></li>
+        <li><a href="#" id="search-btn">TÌM KIẾM</a></li>
         <li><a href="shop.html">CỬA HÀNG</a></li>
         <li><a href="about.html">GIỚI THIỆU</a></li>
     </ul>
 </nav>
 </header>
-
+<!-- Khung tìm kiếm ẩn trượt xuống -->
+<div id="search-box" class="search-slide-box">
+    <input type="text" placeholder="Bạn muốn tìm gì hôm nay?">
+    <button type="button">TÌM KIẾM</button>
+</div>
     <section class="hero">
         <h1>Maison Dazel</h1>
         <p style="margin-bottom: 30px; color: #555;">Sự tinh tế đến từ những đường nét đơn giản nhất.</p>
@@ -44,5 +48,12 @@
     <footer>
         <p>&copy; maison dazel.</p>
     </footer>
+<!-- Script bật tắt hiệu ứng trượt tìm kiếm -->
+<script>
+    document.getElementById("search-btn").addEventListener("click", function(event) {
+        event.preventDefault(); 
+        document.getElementById("search-box").classList.toggle("show");
+    });
+</script>
 </body>
 </html>
