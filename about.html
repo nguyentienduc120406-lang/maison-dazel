@@ -51,9 +51,15 @@
             <p>Hotline: +84 912 541976 </p>
         </div>
     </main>
-
     <footer>
         <p>&copy; maison dazel.</p>
     </footer>
+<!-- Script bật tắt hiệu ứng trượt tìm kiếm -->
+    <script>
+        document.getElementById("search-btn").addEventListener("click", function(event) {
+            event.preventDefault(); // Ngăn trình duyệt nhảy giật lên đầu trang
+            document.getElementById("search-box").classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
